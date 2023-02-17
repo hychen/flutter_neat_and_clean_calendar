@@ -20,14 +20,15 @@ class PlatformIconButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (!kIsWeb && Platform.isMacOS) {
+    // we want to use the web version of Macos UI Button.
+    // if (!kIsWeb && Platform.isMacOS) {
       return MacosIconButton(icon: icon, onPressed: onPressed);
-    }
-    return IconButton(
-      icon: icon,
-      iconSize: iconSize,
-      padding: padding ?? EdgeInsets.zero,
-      onPressed: onPressed,
-    );
+    // }
+    // return IconButton(
+    //  icon: icon,
+    //  iconSize: iconSize,
+    //  padding: padding ?? EdgeInsets.zero,
+    //  onPressed: onPressed,
+    //);
   }
 }
